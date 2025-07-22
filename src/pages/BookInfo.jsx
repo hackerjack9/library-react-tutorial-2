@@ -7,8 +7,8 @@ import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import Book from "../components/ui/Book";
 
 
-const BookInfo = ({ books, addToCart }) => {
-  const param = useParams();
+const BookInfo = ({ books, addToCart, cart }) => {
+  const { id } = useParams();
   const book = books.find((book) => +book.id === +id);
  
 
