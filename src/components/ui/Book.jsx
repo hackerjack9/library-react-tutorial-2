@@ -9,11 +9,12 @@ const Book = ({book}) => {
   const [img, setImg] = useState();
 
   const mountedRef = useRef(true);
- 
+
   useEffect(() => {
+     mountedRef.current = true ;
     const image = new Image();
     image.src = book.url;
-    image.onLoad = () => {
+    image.onload = () => {
         setTimeout(() => {
             if (mountedRef.current) {
             setImg(image);

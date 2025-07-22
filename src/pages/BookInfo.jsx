@@ -20,8 +20,6 @@ function bookExistsOnCart() {
  return cart.find(book => book.id === +id);
 }
 
-
-
   return (
     <div id="books__body">
       <main id="books__main">
