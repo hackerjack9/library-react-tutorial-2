@@ -16,6 +16,14 @@ function filterBooks(filter) {
             (a.salePrice || a.originalPrice) - 
             (b.salePrice || b.originalPrice)))
     }
+    if (filter === 'HIGH_TO_LOW') {
+    setBooks(
+        books
+        .slice()
+        .sort((a, b) => 
+            (b.salePrice || b.originalPrice) - 
+            (a.salePrice || a.originalPrice)))
+    }
 
     if (filter === 'RATING') {
     setBooks(
